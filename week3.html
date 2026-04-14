@@ -2,38 +2,332 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Week 3</title>
+<title>Week 3 — Stability & Change</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
-body {font-family:'Poppins'; background:#eef6fb; padding:20px;}
-.card {background:white; padding:20px; border-radius:10px;}
-button {margin-top:15px;}
+body {
+font-family:'Poppins', sans-serif;
+background:#eef6fb;
+padding:20px;
+margin:0;
+color:#1a1a1a;
+}
+
+h1, h2 {
+margin-top:0;
+}
+
+.subtitle {
+text-align:center;
+margin-bottom:25px;
+}
+
+.card {
+background:white;
+padding:20px;
+border-radius:12px;
+margin-bottom:24px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.question {
+margin-top:18px;
+padding:12px;
+background:#f8fbff;
+border-left:4px solid #1565c0;
+border-radius:8px;
+}
+
+button {
+margin-top:15px;
+padding:10px 14px;
+border:none;
+background:#1565c0;
+color:white;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover {
+background:#0d47a1;
+}
+
+.reviewBox {
+background:#f1f8e9;
+padding:12px;
+border-radius:8px;
+margin-top:12px;
+border-left:4px solid #4caf50;
+}
+
+table {
+width:100%;
+border-collapse:collapse;
+margin-top:12px;
+margin-bottom:18px;
+}
+
+th, td {
+border:1px solid #ccc;
+padding:8px;
+text-align:center;
+}
+
+th {
+background:#1565c0;
+color:white;
+}
+
+.mission-nav {
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-bottom:24px;
+}
+
+.mission-link {
+display:block;
+background:white;
+border:2px solid #1565c0;
+padding:12px 14px;
+border-radius:10px;
+font-weight:600;
+text-decoration:none;
+color:#0d47a1;
+}
+
+.mission-link:hover {
+background:#1565c0;
+color:white;
+}
 </style>
 </head>
 
 <body>
 
-<h1>🌲 Week 3: Stability & Change</h1>
+<h1>🌲 Minnesota Field Scientist</h1>
+<p class="subtitle">Week 3: Stability & Change</p>
 
-<div class="card">
+<div class="mission-nav">
+<a class="mission-link" href="#mission7">🦪 Mission 7 — Zebra Mussel Invasion</a>
+<a class="mission-link" href="#mission8">🪨 Mission 8 — North Shore Freeze–Thaw</a>
+<a class="mission-link" href="#mission9">🛶 Mission 9 — Boundary Waters Forces</a>
+</div>
 
-<h2>🦪 Zebra Mussels</h2>
+<div class="card" id="mission7">
 
-<p>Zebra mussels are reducing native species.</p>
+<h2>🦪 Mission 7: Zebra Mussel Invasion</h2>
 
-<input type="radio" name="q1" value="0"> Competition<br>
-<input type="radio" name="q1" value="1"> Sunlight<br>
+<p>Over the past decade, zebra mussels have spread to several Minnesota lakes. Scientists observed that as zebra mussel populations increased, native mussel populations declined significantly. Researchers are studying how invasive species affect ecosystem balance and biodiversity.</p>
 
-<button onclick="check()">Check</button>
-<p id="f"></p>
+<table>
+<tr><th>Year</th><th>Native Mussel Population Index</th></tr>
+<tr><td>1</td><td>100</td></tr>
+<tr><td>3</td><td>92</td></tr>
+<tr><td>5</td><td>75</td></tr>
+<tr><td>7</td><td>60</td></tr>
+<tr><td>10</td><td>45</td></tr>
+</table>
+
+<div class="question">
+<p><strong>Q1:</strong> Which statement best describes the trend in native mussel populations?</p>
+<input type="radio" name="m7q1" value="0"> Native mussel populations steadily increased over time.<br>
+<input type="radio" name="m7q1" value="1"> Native mussel populations decreased over time.<br>
+<input type="radio" name="m7q1" value="2"> Native mussel populations remained constant.<br>
+<input type="radio" name="m7q1" value="3"> Native mussel populations changed randomly.<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> Which explanation best accounts for the decline in native mussel populations?</p>
+<input type="radio" name="m7q2" value="0"> Zebra mussels compete for food and habitat resources.<br>
+<input type="radio" name="m7q2" value="1"> Zebra mussels increase oxygen levels in water.<br>
+<input type="radio" name="m7q2" value="2"> Native mussels stop interacting with water.<br>
+<input type="radio" name="m7q2" value="3"> Zebra mussels eliminate sunlight.<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> How might declining native mussel populations affect the larger lake ecosystem?</p>
+<input type="radio" name="m7q3" value="0"> Changes in water clarity and nutrient cycling.<br>
+<input type="radio" name="m7q3" value="1"> The lake will immediately freeze.<br>
+<input type="radio" name="m7q3" value="2"> All fish will disappear instantly.<br>
+<input type="radio" name="m7q3" value="3"> Sunlight will stop reaching the lake.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> Which conclusion is most reasonable?</p>
+<input type="radio" name="m7q4" value="0"> The ecosystem remains stable despite invasive species.<br>
+<input type="radio" name="m7q4" value="1"> The ecosystem may experience long-term instability due to biodiversity loss.<br>
+<input type="radio" name="m7q4" value="2"> Invasive species have no measurable effect.<br>
+<input type="radio" name="m7q4" value="3"> The lake permanently becomes an ocean.<br>
+</div>
+
+<button onclick="checkMission7()">Check Mission 7</button>
+<div id="feedback7"></div>
+
+</div>
+
+<div class="card" id="mission8">
+
+<h2>🪨 Mission 8: North Shore Freeze–Thaw</h2>
+
+<p>Along Minnesota’s North Shore of Lake Superior, steep rocky cliffs experience repeated freezing and thawing during late fall and early spring. Scientists have observed that cracks in the rock gradually widen over time.</p>
+
+<table>
+<tr><th>Day</th><th>High Temp (°C)</th><th>Low Temp (°C)</th></tr>
+<tr><td>1</td><td>3</td><td>-4</td></tr>
+<tr><td>2</td><td>5</td><td>-2</td></tr>
+<tr><td>3</td><td>4</td><td>-3</td></tr>
+<tr><td>4</td><td>6</td><td>-1</td></tr>
+<tr><td>5</td><td>2</td><td>-5</td></tr>
+</table>
+
+<div class="question">
+<p><strong>Q1:</strong> Which statement best describes the temperature pattern during the week?</p>
+<input type="radio" name="m8q1" value="0"> Temperatures remained below freezing all week.<br>
+<input type="radio" name="m8q1" value="1"> Temperatures remained above freezing all week.<br>
+<input type="radio" name="m8q1" value="2"> Temperatures fluctuated above and below freezing each day.<br>
+<input type="radio" name="m8q1" value="3"> Temperatures steadily increased throughout the week.<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> Why does repeated freezing and thawing cause cracks in rock to widen?</p>
+<input type="radio" name="m8q2" value="0"> Water expands when it freezes, increasing pressure inside cracks.<br>
+<input type="radio" name="m8q2" value="1"> Ice shrinks as it freezes, pulling rock inward.<br>
+<input type="radio" name="m8q2" value="2"> Freezing removes all moisture from rock permanently.<br>
+<input type="radio" name="m8q2" value="3"> Ice reduces gravity around the cliff.<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> Which conclusion is most reasonable about the cliff system over time?</p>
+<input type="radio" name="m8q3" value="0"> The cliff will remain completely unchanged.<br>
+<input type="radio" name="m8q3" value="1"> Repeated freeze–thaw cycles may gradually destabilize the cliff.<br>
+<input type="radio" name="m8q3" value="2"> The cliff will instantly collapse after one freeze.<br>
+<input type="radio" name="m8q3" value="3"> Temperature changes prevent any rock movement.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> How might increased freeze–thaw activity affect Lake Superior’s shoreline ecosystem?</p>
+<input type="radio" name="m8q4" value="0"> Increased sediment may enter the water, affecting aquatic habitats.<br>
+<input type="radio" name="m8q4" value="1"> Lake water will permanently disappear.<br>
+<input type="radio" name="m8q4" value="2"> The lake will freeze year-round.<br>
+<input type="radio" name="m8q4" value="3"> Fish will stop interacting with water.<br>
+</div>
+
+<button onclick="checkMission8()">Check Mission 8</button>
+<div id="feedback8"></div>
+
+</div>
+
+<div class="card" id="mission9">
+
+<h2>🛶 Mission 9: Boundary Waters Canoe Forces</h2>
+
+<p>During a science field trip in the Boundary Waters Canoe Area Wilderness, students measured how wind and paddling forces affected canoe movement. In one experiment, two students paddled forward with equal strength while a steady wind pushed against the canoe from the front.</p>
+
+<div class="question">
+<p><strong>Q1:</strong> Student A paddles with 50 N and Student B paddles with 50 N forward. What is the total forward force?</p>
+<input type="radio" name="m9q1" value="0"> 0 N<br>
+<input type="radio" name="m9q1" value="1"> 50 N<br>
+<input type="radio" name="m9q1" value="2"> 100 N<br>
+<input type="radio" name="m9q1" value="3"> 150 N<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> If wind pushes backward with 100 N, what is the net force on the canoe?</p>
+<input type="radio" name="m9q2" value="0"> 0 N<br>
+<input type="radio" name="m9q2" value="1"> 100 N forward<br>
+<input type="radio" name="m9q2" value="2"> 100 N backward<br>
+<input type="radio" name="m9q2" value="3"> 200 N forward<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> Based on the net force, how will the canoe move?</p>
+<input type="radio" name="m9q3" value="0"> It will accelerate forward.<br>
+<input type="radio" name="m9q3" value="1"> It will accelerate backward.<br>
+<input type="radio" name="m9q3" value="2"> It will remain at constant velocity (no acceleration).<br>
+<input type="radio" name="m9q3" value="3"> It will spin uncontrollably.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> If the wind increases to 150 N while paddling remains the same, what will happen?</p>
+<input type="radio" name="m9q4" value="0"> The canoe will accelerate backward.<br>
+<input type="radio" name="m9q4" value="1"> The canoe will remain balanced.<br>
+<input type="radio" name="m9q4" value="2"> The canoe will accelerate forward faster.<br>
+<input type="radio" name="m9q4" value="3"> The canoe will stop interacting with wind.<br>
+</div>
+
+<button onclick="checkMission9()">Check Mission 9</button>
+<div id="feedback9"></div>
 
 </div>
 
 <script>
-function check(){
-let q=document.querySelector('input[name="q1"]:checked');
-let score = (q && q.value=="0") ? 1 : 0;
-document.getElementById("f").innerHTML="Score: "+score+"/1";
+function checkMission7() {
+let score = 0;
+let q1 = document.querySelector('input[name="m7q1"]:checked');
+let q2 = document.querySelector('input[name="m7q2"]:checked');
+let q3 = document.querySelector('input[name="m7q3"]:checked');
+let q4 = document.querySelector('input[name="m7q4"]:checked');
+
+if (q1 && q1.value === "1") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "0") score++;
+if (q4 && q4.value === "1") score++;
+
+document.getElementById("feedback7").innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: Native mussel populations decreased over time.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Zebra mussels compete for food and habitat resources.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Changes in water clarity and nutrient cycling.</p>" +
+"<p><strong>Q4:</strong> Correct answer: The ecosystem may experience long-term instability due to biodiversity loss.</p>" +
+"</div>";
+}
+
+function checkMission8() {
+let score = 0;
+let q1 = document.querySelector('input[name="m8q1"]:checked');
+let q2 = document.querySelector('input[name="m8q2"]:checked');
+let q3 = document.querySelector('input[name="m8q3"]:checked');
+let q4 = document.querySelector('input[name="m8q4"]:checked');
+
+if (q1 && q1.value === "2") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "1") score++;
+if (q4 && q4.value === "0") score++;
+
+document.getElementById("feedback8").innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: Temperatures fluctuated above and below freezing each day.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Water expands when it freezes, increasing pressure inside cracks.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Repeated freeze–thaw cycles may gradually destabilize the cliff.</p>" +
+"<p><strong>Q4:</strong> Correct answer: Increased sediment may enter the water, affecting aquatic habitats.</p>" +
+"</div>";
+}
+
+function checkMission9() {
+let score = 0;
+let q1 = document.querySelector('input[name="m9q1"]:checked');
+let q2 = document.querySelector('input[name="m9q2"]:checked');
+let q3 = document.querySelector('input[name="m9q3"]:checked');
+let q4 = document.querySelector('input[name="m9q4"]:checked');
+
+if (q1 && q1.value === "2") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "2") score++;
+if (q4 && q4.value === "0") score++;
+
+document.getElementById("feedback9").innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: 100 N.</p>" +
+"<p><strong>Q2:</strong> Correct answer: 0 N.</p>" +
+"<p><strong>Q3:</strong> Correct answer: It will remain at constant velocity (no acceleration).</p>" +
+"<p><strong>Q4:</strong> Correct answer: The canoe will accelerate backward.</p>" +
+"</div>";
 }
 </script>
 
