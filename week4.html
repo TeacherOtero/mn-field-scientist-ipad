@@ -2,35 +2,355 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Week 4</title>
+<title>Week 4 — Capstone & Systems Integration</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
-body {font-family:'Poppins'; background:#eef6fb; padding:20px;}
-textarea {width:100%;}
+body {
+font-family:'Poppins', sans-serif;
+background:#eef6fb;
+padding:20px;
+margin:0;
+color:#1a1a1a;
+}
+
+h1, h2 {
+margin-top:0;
+}
+
+.subtitle {
+text-align:center;
+margin-bottom:25px;
+}
+
+.card {
+background:white;
+padding:20px;
+border-radius:12px;
+margin-bottom:24px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.question {
+margin-top:18px;
+padding:12px;
+background:#f8fbff;
+border-left:4px solid #1565c0;
+border-radius:8px;
+}
+
+button {
+margin-top:15px;
+padding:10px 14px;
+border:none;
+background:#1565c0;
+color:white;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover {
+background:#0d47a1;
+}
+
+.reviewBox {
+background:#f1f8e9;
+padding:12px;
+border-radius:8px;
+margin-top:12px;
+border-left:4px solid #4caf50;
+}
+
+table {
+width:100%;
+border-collapse:collapse;
+margin-top:12px;
+margin-bottom:18px;
+}
+
+th, td {
+border:1px solid #ccc;
+padding:8px;
+text-align:center;
+}
+
+th {
+background:#1565c0;
+color:white;
+}
+
+.mission-nav {
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-bottom:24px;
+}
+
+.mission-link {
+display:block;
+background:white;
+border:2px solid #1565c0;
+padding:12px 14px;
+border-radius:10px;
+font-weight:600;
+text-decoration:none;
+color:#0d47a1;
+}
+
+.mission-link:hover {
+background:#1565c0;
+color:white;
+}
+
+textarea {
+width:100%;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+margin-top:8px;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
 </style>
 </head>
 
 <body>
 
-<h1>🌲 Week 4: Capstone</h1>
+<h1>🌲 Minnesota Field Scientist</h1>
+<p class="subtitle">Week 4: Capstone & Systems Integration</p>
 
-<p>Minnesota systems are changing due to climate and human activity.</p>
+<div class="mission-nav">
+<a class="mission-link" href="#mission10">🛣 Mission 10 — Freeze–Thaw Road Damage</a>
+<a class="mission-link" href="#mission11">🌪 Mission 11 — Severe Storm Engineering</a>
+<a class="mission-link" href="#mission12">🌎 Mission 12 — Protect Minnesota</a>
+</div>
 
-<p><strong>What is the best explanation?</strong></p>
+<div class="card" id="mission10">
 
-<input type="radio" name="q1" value="0"> Systems are connected<br>
-<input type="radio" name="q1" value="1"> Systems are independent<br>
+<h2>🛣 Mission 10: Freeze–Thaw Road Damage</h2>
 
-<h3>Optional CER Reflection</h3>
+<p>In late winter across Minnesota, road crews observe new cracks and potholes forming in highways and neighborhood streets. Engineers explain that repeated freezing and thawing cycles contribute to road damage.</p>
 
-<p>Claim:</p>
-<textarea></textarea>
+<table>
+<tr><th>Day</th><th>High Temp (°C)</th><th>Low Temp (°C)</th></tr>
+<tr><td>1</td><td>4</td><td>-3</td></tr>
+<tr><td>2</td><td>6</td><td>-2</td></tr>
+<tr><td>3</td><td>3</td><td>-4</td></tr>
+<tr><td>4</td><td>5</td><td>-1</td></tr>
+<tr><td>5</td><td>2</td><td>-5</td></tr>
+</table>
 
-<p>Evidence:</p>
-<textarea></textarea>
+<div class="question">
+<p><strong>Q1:</strong> Which statement best describes the temperature pattern shown?</p>
+<input type="radio" name="m10q1" value="0"> Temperatures remained below freezing all five days.<br>
+<input type="radio" name="m10q1" value="1"> Temperatures remained above freezing all five days.<br>
+<input type="radio" name="m10q1" value="2"> Temperatures repeatedly rose above and fell below freezing.<br>
+<input type="radio" name="m10q1" value="3"> Temperatures steadily increased each day.<br>
+</div>
 
-<p>Reasoning:</p>
-<textarea></textarea>
+<div class="question">
+<p><strong>Q2:</strong> Why does water freezing inside cracks contribute to pavement damage?</p>
+<input type="radio" name="m10q2" value="0"> Water expands as it freezes, increasing pressure on the pavement.<br>
+<input type="radio" name="m10q2" value="1"> Water shrinks when it freezes, pulling pavement inward.<br>
+<input type="radio" name="m10q2" value="2"> Ice absorbs heat from the road, strengthening it.<br>
+<input type="radio" name="m10q2" value="3"> Frozen water permanently seals cracks.<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> Why do potholes often appear after many freeze–thaw cycles rather than after a single freeze?</p>
+<input type="radio" name="m10q3" value="0"> Repeated expansion and contraction gradually weaken the pavement structure.<br>
+<input type="radio" name="m10q3" value="1"> Pavement instantly collapses after one freeze.<br>
+<input type="radio" name="m10q3" value="2"> Vehicles prevent freezing from occurring.<br>
+<input type="radio" name="m10q3" value="3"> Temperature changes eliminate cracks.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> Which strategy would most effectively reduce freeze–thaw damage in roads?</p>
+<input type="radio" name="m10q4" value="0"> Improving drainage systems to prevent water accumulation in cracks.<br>
+<input type="radio" name="m10q4" value="1"> Increasing the number of cracks in the pavement.<br>
+<input type="radio" name="m10q4" value="2"> Blocking sunlight from roads.<br>
+<input type="radio" name="m10q4" value="3"> Removing asphalt from road surfaces.<br>
+</div>
+
+<button onclick="checkMission10()">Check Mission 10</button>
+<div id="feedback10"></div>
+
+</div>
+
+<div class="card" id="mission11">
+
+<h2>🌪 Mission 11: Severe Storm Engineering</h2>
+
+<p>During a powerful summer storm in southern Minnesota, wind speeds reached 70 miles per hour. Several older barns and lightweight structures suffered damage, while newer buildings with reinforced roofing systems remained intact.</p>
+
+<table>
+<tr><th>Time</th><th>Wind Speed (mph)</th></tr>
+<tr><td>2:00 PM</td><td>30</td></tr>
+<tr><td>3:00 PM</td><td>45</td></tr>
+<tr><td>4:00 PM</td><td>60</td></tr>
+<tr><td>5:00 PM</td><td>70</td></tr>
+</table>
+
+<div class="question">
+<p><strong>Q1:</strong> Which statement best describes the wind speed trend?</p>
+<input type="radio" name="m11q1" value="0"> Wind speeds steadily increased over time.<br>
+<input type="radio" name="m11q1" value="1"> Wind speeds remained constant.<br>
+<input type="radio" name="m11q1" value="2"> Wind speeds decreased sharply.<br>
+<input type="radio" name="m11q1" value="3"> Wind speeds changed randomly.<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> Why does increasing wind speed increase structural damage risk?</p>
+<input type="radio" name="m11q2" value="0"> Higher wind speed increases the force exerted on structures.<br>
+<input type="radio" name="m11q2" value="1"> Wind speed reduces gravity acting on buildings.<br>
+<input type="radio" name="m11q2" value="2"> Faster wind decreases air pressure on surfaces.<br>
+<input type="radio" name="m11q2" value="3"> Wind eliminates structural materials.<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> Which roof design would most effectively reduce wind damage?</p>
+<input type="radio" name="m11q3" value="0"> Aerodynamic sloped roof.<br>
+<input type="radio" name="m11q3" value="1"> Flat, unsupported roof panels.<br>
+<input type="radio" name="m11q3" value="2"> Lightweight paper covering.<br>
+<input type="radio" name="m11q3" value="3"> Roof with no anchoring system.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> Why must engineers consider trade-offs when designing storm-resistant structures?</p>
+<input type="radio" name="m11q4" value="0"> Stronger materials may increase cost or reduce flexibility.<br>
+<input type="radio" name="m11q4" value="1"> All designs have identical costs and benefits.<br>
+<input type="radio" name="m11q4" value="2"> Wind never changes direction.<br>
+<input type="radio" name="m11q4" value="3"> Buildings do not interact with the environment.<br>
+</div>
+
+<button onclick="checkMission11()">Check Mission 11</button>
+<div id="feedback11"></div>
+
+</div>
+
+<div class="card" id="mission12">
+
+<h2>🌎 Mission 12: Protect Minnesota</h2>
+
+<p>Over the past decade, Minnesota scientists have observed several interconnected environmental changes: northern lakes are warming, river flooding is becoming more frequent, invasive species are spreading, freeze–thaw cycles are damaging roads, and severe storms are increasing in intensity.</p>
+
+<table>
+<tr><th>System</th><th>Observed Change</th></tr>
+<tr><td>Lakes</td><td>20°C → 25°C</td></tr>
+<tr><td>Rivers</td><td>15,000 CFS → 40,000 CFS</td></tr>
+<tr><td>Native Mussels</td><td>100 → 45</td></tr>
+<tr><td>Storm Winds</td><td>30 mph → 70 mph</td></tr>
+</table>
+
+<div class="question">
+<p><strong>Q1:</strong> Which statement best explains how these changes demonstrate interconnected systems?</p>
+<input type="radio" name="m12q1" value="0"> Changes in climate patterns can influence water systems, ecosystems, and infrastructure simultaneously.<br>
+<input type="radio" name="m12q1" value="1"> Each environmental change occurs independently and does not affect other systems.<br>
+<input type="radio" name="m12q1" value="2"> Storms only affect weather systems and nothing else.<br>
+<input type="radio" name="m12q1" value="3"> Lake temperature changes prevent flooding.<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> How might rising lake temperatures indirectly affect river flooding and ecosystem stability?</p>
+<input type="radio" name="m12q2" value="0"> Warmer temperatures can influence precipitation patterns, increasing runoff and altering ecosystems.<br>
+<input type="radio" name="m12q2" value="1"> Lake temperature has no impact on other systems.<br>
+<input type="radio" name="m12q2" value="2"> Warmer lakes eliminate invasive species.<br>
+<input type="radio" name="m12q2" value="3"> River systems stop responding to weather.<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> Which strategy best demonstrates systems-level thinking when addressing these issues?</p>
+<input type="radio" name="m12q3" value="0"> Restoring wetlands to absorb floodwater while reinforcing infrastructure and protecting biodiversity.<br>
+<input type="radio" name="m12q3" value="1"> Focusing only on rebuilding roads without considering water systems.<br>
+<input type="radio" name="m12q3" value="2"> Removing all vegetation near rivers.<br>
+<input type="radio" name="m12q3" value="3"> Increasing pavement near lakes to reduce erosion.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> If Minnesota continues to experience increased storm intensity and temperature fluctuations, which outcome is most likely?</p>
+<input type="radio" name="m12q4" value="0"> Greater stress on ecosystems and infrastructure requiring coordinated management strategies.<br>
+<input type="radio" name="m12q4" value="1"> Immediate stabilization of all natural systems.<br>
+<input type="radio" name="m12q4" value="2"> Elimination of seasonal weather patterns.<br>
+<input type="radio" name="m12q4" value="3"> Complete independence between natural and human systems.<br>
+</div>
+
+<p><strong>Optional CER Reflection</strong></p>
+<p>Use evidence from at least two systems described above to explain why Minnesota must use systems-level solutions to address environmental change.</p>
+<textarea rows="5" placeholder="Claim, evidence, and reasoning..."></textarea>
+
+<button onclick="checkMission12()">Check Mission 12</button>
+<div id="feedback12"></div>
+
+</div>
+
+<script>
+function checkMission10() {
+let score = 0;
+let q1 = document.querySelector('input[name="m10q1"]:checked');
+let q2 = document.querySelector('input[name="m10q2"]:checked');
+let q3 = document.querySelector('input[name="m10q3"]:checked');
+let q4 = document.querySelector('input[name="m10q4"]:checked');
+
+if (q1 && q1.value === "2") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "0") score++;
+if (q4 && q4.value === "0") score++;
+
+document.getElementById("feedback10").innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: Temperatures repeatedly rose above and fell below freezing.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Water expands as it freezes, increasing pressure on the pavement.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Repeated expansion and contraction gradually weaken the pavement structure.</p>" +
+"<p><strong>Q4:</strong> Correct answer: Improving drainage systems to prevent water accumulation in cracks.</p>" +
+"</div>";
+}
+
+function checkMission11() {
+let score = 0;
+let q1 = document.querySelector('input[name="m11q1"]:checked');
+let q2 = document.querySelector('input[name="m11q2"]:checked');
+let q3 = document.querySelector('input[name="m11q3"]:checked');
+let q4 = document.querySelector('input[name="m11q4"]:checked');
+
+if (q1 && q1.value === "0") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "0") score++;
+if (q4 && q4.value === "0") score++;
+
+document.getElementById("feedback11").innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: Wind speeds steadily increased over time.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Higher wind speed increases the force exerted on structures.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Aerodynamic sloped roof.</p>" +
+"<p><strong>Q4:</strong> Correct answer: Stronger materials may increase cost or reduce flexibility.</p>" +
+"</div>";
+}
+
+function checkMission12() {
+let score = 0;
+let q1 = document.querySelector('input[name="m12q1"]:checked');
+let q2 = document.querySelector('input[name="m12q2"]:checked');
+let q3 = document.querySelector('input[name="m12q3"]:checked');
+let q4 = document.querySelector('input[name="m12q4"]:checked');
+
+if (q1 && q1.value === "0") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "0") score++;
+if (q4 && q4.value === "0") score++;
+
+document.getElementById("feedback12").innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: Changes in climate patterns can influence water systems, ecosystems, and infrastructure simultaneously.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Warmer temperatures can influence precipitation patterns, increasing runoff and altering ecosystems.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Restoring wetlands to absorb floodwater while reinforcing infrastructure and protecting biodiversity.</p>" +
+"<p><strong>Q4:</strong> Correct answer: Greater stress on ecosystems and infrastructure requiring coordinated management strategies.</p>" +
+"</div>";
+}
+</script>
 
 </body>
 </html>
