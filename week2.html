@@ -6,65 +6,332 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-body {font-family:'Poppins', sans-serif; background:#eef6fb; padding:20px; margin:0;}
-.card {background:white; padding:20px; border-radius:10px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-.question {margin-top:15px;}
-button {margin-top:15px; padding:10px; border:none; background:#1565c0; color:white; border-radius:6px;}
-.reviewBox {background:#f1f8e9; padding:12px; border-radius:8px; margin-top:10px;}
-table {width:100%; border-collapse:collapse; margin-top:10px;}
-th, td {border:1px solid #ccc; padding:8px; text-align:center;}
-th {background:#1565c0; color:white;}
+body {
+font-family:'Poppins', sans-serif;
+background:#eef6fb;
+padding:20px;
+margin:0;
+color:#1a1a1a;
+}
+
+h1, h2 {
+margin-top:0;
+}
+
+.subtitle {
+text-align:center;
+margin-bottom:25px;
+}
+
+.card {
+background:white;
+padding:20px;
+border-radius:12px;
+margin-bottom:24px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.question {
+margin-top:18px;
+padding:12px;
+background:#f8fbff;
+border-left:4px solid #1565c0;
+border-radius:8px;
+}
+
+button {
+margin-top:15px;
+padding:10px 14px;
+border:none;
+background:#1565c0;
+color:white;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover {
+background:#0d47a1;
+}
+
+.reviewBox {
+background:#f1f8e9;
+padding:12px;
+border-radius:8px;
+margin-top:12px;
+border-left:4px solid #4caf50;
+}
+
+table {
+width:100%;
+border-collapse:collapse;
+margin-top:12px;
+margin-bottom:18px;
+}
+
+th, td {
+border:1px solid #ccc;
+padding:8px;
+text-align:center;
+}
+
+th {
+background:#1565c0;
+color:white;
+}
+
+.mission-nav {
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-bottom:24px;
+}
+
+.mission-link {
+display:block;
+background:white;
+border:2px solid #1565c0;
+padding:12px 14px;
+border-radius:10px;
+font-weight:600;
+text-decoration:none;
+color:#0d47a1;
+}
+
+.mission-link:hover {
+background:#1565c0;
+color:white;
+}
 </style>
 </head>
 
 <body>
 
 <h1>🌲 Minnesota Field Scientist</h1>
-<p>Week 2: Energy & Matter</p>
+<p class="subtitle">Week 2: Energy & Matter</p>
 
-<div class="card">
+<div class="mission-nav">
+<a class="mission-link" href="#mission4">⛏ Mission 4 — Iron Range Mining</a>
+<a class="mission-link" href="#mission5">🌬 Mission 5 — Lake Superior Weather</a>
+<a class="mission-link" href="#mission6">🌿 Mission 6 — Wetland Oxygen Levels</a>
+</div>
+
+<div class="card" id="mission4">
 
 <h2>⛏ Mission 4: Iron Range Mining</h2>
 
-<p>Mining in northern Minnesota has reduced forest cover, exposing soil and increasing erosion.</p>
+<p>In northeastern Minnesota’s Iron Range, surface mining operations have removed large areas of forest to access iron ore deposits. Satellite images taken over the past ten years show significant changes in land cover near mining sites. Scientists are studying how these changes affect soil stability, water systems, and nearby ecosystems.</p>
 
 <table>
 <tr><th>Year</th><th>Forest Cover (%)</th></tr>
 <tr><td>1</td><td>82</td></tr>
+<tr><td>3</td><td>79</td></tr>
 <tr><td>5</td><td>73</td></tr>
+<tr><td>7</td><td>65</td></tr>
 <tr><td>10</td><td>58</td></tr>
 </table>
 
 <div class="question">
-<p><strong>Q1:</strong> What trend occurred?</p>
-<input type="radio" name="m4q1" value="0"> Decrease<br>
-<input type="radio" name="m4q1" value="1"> Increase<br>
-<input type="radio" name="m4q1" value="2"> No change<br>
+<p><strong>Q1:</strong> Which statement best describes the trend in forest cover over time?</p>
+<input type="radio" name="m4q1" value="0"> Forest cover remained stable throughout the ten years.<br>
+<input type="radio" name="m4q1" value="1"> Forest cover gradually increased over time.<br>
+<input type="radio" name="m4q1" value="2"> Forest cover decreased steadily over the ten-year period.<br>
+<input type="radio" name="m4q1" value="3"> Forest cover fluctuated randomly without a trend.<br>
 </div>
 
 <div class="question">
-<p><strong>Q2:</strong> Likely outcome?</p>
-<input type="radio" name="m4q2" value="0"> More erosion<br>
-<input type="radio" name="m4q2" value="1"> Less runoff<br>
-<input type="radio" name="m4q2" value="2"> Glacier formation<br>
+<p><strong>Q2:</strong> Which outcome is most likely to occur as forest cover decreases?</p>
+<input type="radio" name="m4q2" value="0"> Increased soil erosion due to reduced root systems.<br>
+<input type="radio" name="m4q2" value="1"> Decreased water runoff during heavy rain.<br>
+<input type="radio" name="m4q2" value="2"> Increased oxygen production in the area.<br>
+<input type="radio" name="m4q2" value="3"> Reduced surface temperatures.<br>
 </div>
 
-<button onclick="checkM4()">Check Mission 4</button>
-<div id="f4"></div>
+<div class="question">
+<p><strong>Q3:</strong> How might decreased forest cover affect nearby rivers and streams?</p>
+<input type="radio" name="m4q3" value="0"> Rivers may experience increased sediment due to erosion.<br>
+<input type="radio" name="m4q3" value="1"> Rivers will permanently stop flowing.<br>
+<input type="radio" name="m4q3" value="2"> Rivers will become saltwater systems.<br>
+<input type="radio" name="m4q3" value="3"> Rivers will freeze year-round.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> Which strategy would best reduce environmental impact while allowing mining to continue?</p>
+<input type="radio" name="m4q4" value="0"> Replant native trees after mining operations.<br>
+<input type="radio" name="m4q4" value="1"> Increase the size of mining areas.<br>
+<input type="radio" name="m4q4" value="2"> Remove all nearby vegetation permanently.<br>
+<input type="radio" name="m4q4" value="3"> Drain nearby wetlands.<br>
+</div>
+
+<button onclick="checkMission4()">Check Mission 4</button>
+<div id="feedback4"></div>
+
+</div>
+
+<div class="card" id="mission5">
+
+<h2>🌬 Mission 5: Lake Superior Weather</h2>
+
+<p>During late fall, cold air masses frequently move across Lake Superior. Meteorologists observe that communities downwind often experience heavy snowfall, even when nearby areas receive little precipitation. Scientists call this phenomenon lake-effect snow.</p>
+
+<table>
+<tr><th>Lake Surface Temperature (°C)</th><th>Incoming Air Temperature (°C)</th></tr>
+<tr><td>8</td><td>-5</td></tr>
+</table>
+
+<div class="question">
+<p><strong>Q1:</strong> Why does air temperature change as it moves over the lake?</p>
+<input type="radio" name="m5q1" value="0"> Heat energy transfers from the warmer lake water to the colder air.<br>
+<input type="radio" name="m5q1" value="1"> The lake removes all moisture from the air.<br>
+<input type="radio" name="m5q1" value="2"> Cold air absorbs sunlight directly from space.<br>
+<input type="radio" name="m5q1" value="3"> The lake freezes instantly.<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> Why does lake-effect snow often occur downwind of Lake Superior?</p>
+<input type="radio" name="m5q2" value="0"> Warmed air rises, collects moisture, and cools as it moves over land.<br>
+<input type="radio" name="m5q2" value="1"> Snow forms only directly above the lake.<br>
+<input type="radio" name="m5q2" value="2"> Cold air prevents all evaporation.<br>
+<input type="radio" name="m5q2" value="3"> Wind removes gravity from snow clouds.<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> Which system interaction is primarily responsible for lake-effect snow?</p>
+<input type="radio" name="m5q3" value="0"> Interaction between hydrosphere and atmosphere.<br>
+<input type="radio" name="m5q3" value="1"> Interaction between biosphere and lithosphere.<br>
+<input type="radio" name="m5q3" value="2"> Interaction between crust and mantle.<br>
+<input type="radio" name="m5q3" value="3"> Interaction between sunspots and tides.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> Which variable most directly affects the amount of lake-effect snow?</p>
+<input type="radio" name="m5q4" value="0"> Temperature difference between air and water.<br>
+<input type="radio" name="m5q4" value="1"> Soil mineral composition.<br>
+<input type="radio" name="m5q4" value="2"> Prairie grass density.<br>
+<input type="radio" name="m5q4" value="3"> Mining activity.<br>
+</div>
+
+<button onclick="checkMission5()">Check Mission 5</button>
+<div id="feedback5"></div>
+
+</div>
+
+<div class="card" id="mission6">
+
+<h2>🌿 Mission 6: Wetland Oxygen Levels</h2>
+
+<p>A team of environmental scientists is studying a wetland in central Minnesota. Over several weeks, they measured dissolved oxygen levels in the water and recorded changes in sunlight exposure due to increased cloud cover and nearby tree growth. Researchers observed that oxygen levels in the wetland water decreased during periods of reduced sunlight.</p>
+
+<table>
+<tr><th>Week</th><th>Average Sunlight (hours/day)</th><th>Dissolved Oxygen (mg/L)</th></tr>
+<tr><td>1</td><td>10</td><td>8.5</td></tr>
+<tr><td>2</td><td>8</td><td>7.2</td></tr>
+<tr><td>3</td><td>6</td><td>6.1</td></tr>
+<tr><td>4</td><td>5</td><td>5.4</td></tr>
+</table>
+
+<div class="question">
+<p><strong>Q1:</strong> Which statement best describes the relationship between sunlight and dissolved oxygen levels?</p>
+<input type="radio" name="m6q1" value="0"> As sunlight decreases, dissolved oxygen levels increase.<br>
+<input type="radio" name="m6q1" value="1"> As sunlight decreases, dissolved oxygen levels also decrease.<br>
+<input type="radio" name="m6q1" value="2"> Dissolved oxygen levels remain constant regardless of sunlight.<br>
+<input type="radio" name="m6q1" value="3"> Sunlight and oxygen levels change randomly without a pattern.<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> Why would reduced sunlight result in lower dissolved oxygen levels in the wetland?</p>
+<input type="radio" name="m6q2" value="0"> Sunlight drives photosynthesis, which produces oxygen.<br>
+<input type="radio" name="m6q2" value="1"> Sunlight removes oxygen from water.<br>
+<input type="radio" name="m6q2" value="2"> Sunlight increases evaporation of oxygen molecules.<br>
+<input type="radio" name="m6q2" value="3"> Sunlight changes water into soil.<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> How might decreasing oxygen levels affect fish populations in the wetland?</p>
+<input type="radio" name="m6q3" value="0"> Fish populations may decrease because fish require dissolved oxygen to survive.<br>
+<input type="radio" name="m6q3" value="1"> Fish populations will immediately increase due to less sunlight.<br>
+<input type="radio" name="m6q3" value="2"> Fish populations will become plants.<br>
+<input type="radio" name="m6q3" value="3"> Fish populations will no longer interact with water.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> Which conclusion is most reasonable based on the data?</p>
+<input type="radio" name="m6q4" value="0"> The wetland ecosystem is unaffected by changes in sunlight.<br>
+<input type="radio" name="m6q4" value="1"> The wetland ecosystem may experience instability if oxygen levels continue decreasing.<br>
+<input type="radio" name="m6q4" value="2"> The wetland will permanently dry up.<br>
+<input type="radio" name="m6q4" value="3"> The oxygen decrease guarantees total ecosystem collapse.<br>
+</div>
+
+<button onclick="checkMission6()">Check Mission 6</button>
+<div id="feedback6"></div>
 
 </div>
 
 <script>
-function checkM4(){
-let score=0;
-let q1=document.querySelector('input[name="m4q1"]:checked');
-let q2=document.querySelector('input[name="m4q2"]:checked');
+function checkMission4() {
+let score = 0;
+let q1 = document.querySelector('input[name="m4q1"]:checked');
+let q2 = document.querySelector('input[name="m4q2"]:checked');
+let q3 = document.querySelector('input[name="m4q3"]:checked');
+let q4 = document.querySelector('input[name="m4q4"]:checked');
 
-if(q1 && q1.value=="0") score++;
-if(q2 && q2.value=="0") score++;
+if (q1 && q1.value === "2") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "0") score++;
+if (q4 && q4.value === "0") score++;
 
-document.getElementById("f4").innerHTML =
-"<div class='reviewBox'>Score: "+score+"/2</div>";
+document.getElementById("feedback4").innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: Forest cover decreased steadily over the ten-year period.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Increased soil erosion due to reduced root systems.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Rivers may experience increased sediment due to erosion.</p>" +
+"<p><strong>Q4:</strong> Correct answer: Replant native trees after mining operations.</p>" +
+"</div>";
+}
+
+function checkMission5() {
+let score = 0;
+let q1 = document.querySelector('input[name="m5q1"]:checked');
+let q2 = document.querySelector('input[name="m5q2"]:checked');
+let q3 = document.querySelector('input[name="m5q3"]:checked');
+let q4 = document.querySelector('input[name="m5q4"]:checked');
+
+if (q1 && q1.value === "0") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "0") score++;
+if (q4 && q4.value === "0") score++;
+
+document.getElementById("feedback5").innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: Heat energy transfers from the warmer lake water to the colder air.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Warmed air rises, collects moisture, and cools as it moves over land.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Interaction between hydrosphere and atmosphere.</p>" +
+"<p><strong>Q4:</strong> Correct answer: Temperature difference between air and water.</p>" +
+"</div>";
+}
+
+function checkMission6() {
+let score = 0;
+let q1 = document.querySelector('input[name="m6q1"]:checked');
+let q2 = document.querySelector('input[name="m6q2"]:checked');
+let q3 = document.querySelector('input[name="m6q3"]:checked');
+let q4 = document.querySelector('input[name="m6q4"]:checked');
+
+if (q1 && q1.value === "1") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "0") score++;
+if (q4 && q4.value === "1") score++;
+
+document.getElementById("feedback6").innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: As sunlight decreases, dissolved oxygen levels also decrease.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Sunlight drives photosynthesis, which produces oxygen.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Fish populations may decrease because fish require dissolved oxygen to survive.</p>" +
+"<p><strong>Q4:</strong> Correct answer: The wetland ecosystem may experience instability if oxygen levels continue decreasing.</p>" +
+"</div>";
 }
 </script>
 
