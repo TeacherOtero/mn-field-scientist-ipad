@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Minnesota Field Scientist (iPad)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+font-family: 'Poppins', sans-serif;
+background: #eef6fb;
+padding: 20px;
+margin: 0;
+color: #1a1a1a;
+}
+
+h1, h2 {
+margin-top: 0;
+}
+
+h1 {
+text-align: center;
+}
+
+.subtitle {
+text-align: center;
+margin-bottom: 25px;
+}
+
+.card {
+background: white;
+padding: 20px;
+border-radius: 12px;
+margin-bottom: 24px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.question {
+margin-top: 18px;
+padding: 12px;
+background: #f8fbff;
+border-left: 4px solid #1565c0;
+border-radius: 8px;
+}
+
+button {
+margin-top: 15px;
+padding: 10px 14px;
+border: none;
+background: #1565c0;
+color: white;
+border-radius: 8px;
+font-weight: 600;
+cursor: pointer;
+}
+
+button:hover {
+background: #0d47a1;
+}
+
+.correct {
+color: #2e7d32;
+font-weight: 600;
+}
+
+.incorrect {
+color: #c62828;
+font-weight: 600;
+}
+
+.reviewBox {
+background: #f1f8e9;
+padding: 12px;
+border-radius: 8px;
+margin-top: 12px;
+border-left: 4px solid #4caf50;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 12px;
+margin-bottom: 18px;
+}
+
+th, td {
+border: 1px solid #ccc;
+padding: 8px;
+text-align: center;
+}
+
+th {
+background: #1565c0;
+color: white;
+}
+
+.mission-nav {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 24px;
+}
+
+.mission-link {
+display: block;
+background: white;
+border: 2px solid #1565c0;
+padding: 12px 14px;
+border-radius: 10px;
+font-weight: 600;
+text-decoration: none;
+color: #0d47a1;
+}
+
+.mission-link:hover {
+background: #1565c0;
+color: white;
+}
+
+small.note {
+display: block;
+margin-top: 6px;
+color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌲 Minnesota Field Scientist</h1>
+<p class="subtitle">Week 1: Patterns & Systems</p>
+
+<div class="mission-nav">
+<a class="mission-link" href="#mission1">🌊 Mission 1 — Warming Northwoods Lake</a>
+<a class="mission-link" href="#mission2">🌊 Mission 2 — Mississippi River Flooding</a>
+<a class="mission-link" href="#mission3">🌾 Mission 3 — Prairie Food Web Shift</a>
+</div>
+
+<div class="card" id="mission1">
+
+<h2>🌊 Mission 1: Warming Northwoods Lake</h2>
+
+<p>Over five summers, researchers studying a northern Minnesota lake recorded steadily rising July water temperatures. Local anglers have reported catching fewer walleye, a fish species that requires cool, oxygen-rich water. Scientists are investigating whether warming water may be affecting the lake ecosystem.</p>
+
+<table>
+<tr><th>Year</th><th>Average July Temperature (°C)</th></tr>
+<tr><td>1</td><td>20</td></tr>
+<tr><td>2</td><td>21</td></tr>
+<tr><td>3</td><td>22</td></tr>
+<tr><td>4</td><td>24</td></tr>
+<tr><td>5</td><td>25</td></tr>
+</table>
+
+<div class="question">
+<p><strong>Q1:</strong> Which statement best describes the pattern shown in the data table?</p>
+<input type="radio" name="m1q1" value="0"> The temperature remained constant across all five years.<br>
+<input type="radio" name="m1q1" value="1"> The temperature increased overall during the five-year period.<br>
+<input type="radio" name="m1q1" value="2"> The temperature decreased sharply in the final year.<br>
+<input type="radio" name="m1q1" value="3"> The temperature changed randomly without a clear trend.<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> In this investigation, which variable is changing over time?</p>
+<input type="radio" name="m1q2" value="0"> Year<br>
+<input type="radio" name="m1q2" value="1"> Average water temperature<br>
+<input type="radio" name="m1q2" value="2"> Type of fish present<br>
+<input type="radio" name="m1q2" value="3"> Amount of rainfall<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> Which explanation best connects rising water temperature to declining walleye populations?</p>
+<input type="radio" name="m1q3" value="0"> Warmer water holds less dissolved oxygen, which walleye require to survive.<br>
+<input type="radio" name="m1q3" value="1"> Warmer water causes lakes to freeze more quickly.<br>
+<input type="radio" name="m1q3" value="2"> Higher temperatures prevent sunlight from reaching the lake surface.<br>
+<input type="radio" name="m1q3" value="3"> Warmer water increases the density of oxygen in the lake.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> Based on the data and observations, which conclusion is most reasonable?</p>
+<input type="radio" name="m1q4" value="0"> The lake ecosystem appears stable and unchanged.<br>
+<input type="radio" name="m1q4" value="1"> The lake ecosystem may be experiencing long-term change that could affect species balance.<br>
+<input type="radio" name="m1q4" value="2"> The lake will immediately dry up.<br>
+<input type="radio" name="m1q4" value="3"> The temperature increase guarantees all fish species will disappear.<br>
+</div>
+
+<button onclick="checkMission1()">Check Mission 1</button>
+<div id="feedback1"></div>
+
+</div>
+
+<div class="card" id="mission2">
+
+<h2>🌊 Mission 2: Mississippi River Flooding</h2>
+
+<p>In early April, rapid snowmelt combined with heavy rainfall caused the Mississippi River near St. Paul to rise quickly. Scientists measured river flow over four days and observed dramatic increases. Residents reported increased erosion along the riverbanks.</p>
+
+<table>
+<tr><th>Day</th><th>River Flow (CFS)</th></tr>
+<tr><td>1</td><td>15000</td></tr>
+<tr><td>2</td><td>22000</td></tr>
+<tr><td>3</td><td>35000</td></tr>
+<tr><td>4</td><td>40000</td></tr>
+</table>
+
+<div class="question">
+<p><strong>Q1:</strong> Which statement best describes how the river flow changed over the four-day period?</p>
+<input type="radio" name="m2q1" value="0"> The river flow decreased steadily each day.<br>
+<input type="radio" name="m2q1" value="1"> The river flow increased overall each day.<br>
+<input type="radio" name="m2q1" value="2"> The river flow remained constant.<br>
+<input type="radio" name="m2q1" value="3"> The river flow changed randomly.<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> Which is the dependent variable in this investigation?</p>
+<input type="radio" name="m2q2" value="0"> Day<br>
+<input type="radio" name="m2q2" value="1"> River flow (CFS)<br>
+<input type="radio" name="m2q2" value="2"> Snowfall amount<br>
+<input type="radio" name="m2q2" value="3"> Air temperature<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> Which explanation best describes why erosion increased?</p>
+<input type="radio" name="m2q3" value="0"> Faster-moving water exerts greater force on soil particles.<br>
+<input type="radio" name="m2q3" value="1"> Increased river flow removes gravity.<br>
+<input type="radio" name="m2q3" value="2"> Higher water levels prevent soil from interacting with water.<br>
+<input type="radio" name="m2q3" value="3"> Riverbanks become stronger when water levels rise.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> Based on the data, which conclusion is most reasonable?</p>
+<input type="radio" name="m2q4" value="0"> The river system remained stable.<br>
+<input type="radio" name="m2q4" value="1"> The river system experienced rapid change indicating instability.<br>
+<input type="radio" name="m2q4" value="2"> The river permanently changed direction.<br>
+<input type="radio" name="m2q4" value="3"> The river stopped responding to weather.<br>
+</div>
+
+<button onclick="checkMission2()">Check Mission 2</button>
+<div id="feedback2"></div>
+
+</div>
+
+<div class="card" id="mission3">
+
+<h2>🌾 Mission 3: Prairie Food Web Shift</h2>
+
+<p>After an unusually mild winter in western Minnesota, ecologists observed a sharp increase in grasshopper populations across prairie sites. Researchers also recorded decreases in prairie grass coverage.</p>
+
+<table>
+<tr><th>Year</th><th>Grasshoppers per m²</th></tr>
+<tr><td>1</td><td>12</td></tr>
+<tr><td>2</td><td>14</td></tr>
+<tr><td>3</td><td>13</td></tr>
+<tr><td>4</td><td>25</td></tr>
+</table>
+
+<div class="question">
+<p><strong>Q1:</strong> Which statement best describes the pattern in grasshopper population?</p>
+<input type="radio" name="m3q1" value="0"> The population remained constant.<br>
+<input type="radio" name="m3q1" value="1"> The population decreased steadily.<br>
+<input type="radio" name="m3q1" value="2"> The population increased dramatically in Year 4.<br>
+<input type="radio" name="m3q1" value="3"> The population changed randomly.<br>
+</div>
+
+<div class="question">
+<p><strong>Q2:</strong> Which explanation best connects the mild winter to the population increase?</p>
+<input type="radio" name="m3q2" value="0"> Mild winters allow more grasshoppers to survive.<br>
+<input type="radio" name="m3q2" value="1"> Mild winters eliminate predators permanently.<br>
+<input type="radio" name="m3q2" value="2"> Mild winters reduce sunlight.<br>
+<input type="radio" name="m3q2" value="3"> Mild winters freeze the soil.<br>
+</div>
+
+<div class="question">
+<p><strong>Q3:</strong> If grasshopper populations continue to increase, which outcome is most likely?</p>
+<input type="radio" name="m3q3" value="0"> Prairie grass populations increase.<br>
+<input type="radio" name="m3q3" value="1"> Prairie grass populations decrease due to consumption.<br>
+<input type="radio" name="m3q3" value="2"> All predators disappear instantly.<br>
+<input type="radio" name="m3q3" value="3"> Sunlight levels decrease.<br>
+</div>
+
+<div class="question">
+<p><strong>Q4:</strong> Which best describes the prairie ecosystem response?</p>
+<input type="radio" name="m3q4" value="0"> It remains perfectly stable.<br>
+<input type="radio" name="m3q4" value="1"> It may experience short-term instability.<br>
+<input type="radio" name="m3q4" value="2"> It permanently collapses.<br>
+<input type="radio" name="m3q4" value="3"> It instantly returns to original balance.<br>
+</div>
+
+<button onclick="checkMission3()">Check Mission 3</button>
+<div id="feedback3"></div>
+
+</div>
+
+<script>
+function checkMission1() {
+let score = 0;
+let feedback = document.getElementById("feedback1");
+
+let q1 = document.querySelector('input[name="m1q1"]:checked');
+let q2 = document.querySelector('input[name="m1q2"]:checked');
+let q3 = document.querySelector('input[name="m1q3"]:checked');
+let q4 = document.querySelector('input[name="m1q4"]:checked');
+
+if (q1 && q1.value === "1") score++;
+if (q2 && q2.value === "1") score++;
+if (q3 && q3.value === "0") score++;
+if (q4 && q4.value === "1") score++;
+
+feedback.innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: The temperature increased overall during the five-year period.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Average water temperature.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Warmer water holds less dissolved oxygen, which walleye require to survive.</p>" +
+"<p><strong>Q4:</strong> Correct answer: The lake ecosystem may be experiencing long-term change that could affect species balance.</p>" +
+"</div>";
+}
+
+function checkMission2() {
+let score = 0;
+let feedback = document.getElementById("feedback2");
+
+let q1 = document.querySelector('input[name="m2q1"]:checked');
+let q2 = document.querySelector('input[name="m2q2"]:checked');
+let q3 = document.querySelector('input[name="m2q3"]:checked');
+let q4 = document.querySelector('input[name="m2q4"]:checked');
+
+if (q1 && q1.value === "1") score++;
+if (q2 && q2.value === "1") score++;
+if (q3 && q3.value === "0") score++;
+if (q4 && q4.value === "1") score++;
+
+feedback.innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: The river flow increased overall each day.</p>" +
+"<p><strong>Q2:</strong> Correct answer: River flow (CFS).</p>" +
+"<p><strong>Q3:</strong> Correct answer: Faster-moving water exerts greater force on soil particles.</p>" +
+"<p><strong>Q4:</strong> Correct answer: The river system experienced rapid change indicating instability.</p>" +
+"</div>";
+}
+
+function checkMission3() {
+let score = 0;
+let feedback = document.getElementById("feedback3");
+
+let q1 = document.querySelector('input[name="m3q1"]:checked');
+let q2 = document.querySelector('input[name="m3q2"]:checked');
+let q3 = document.querySelector('input[name="m3q3"]:checked');
+let q4 = document.querySelector('input[name="m3q4"]:checked');
+
+if (q1 && q1.value === "2") score++;
+if (q2 && q2.value === "0") score++;
+if (q3 && q3.value === "1") score++;
+if (q4 && q4.value === "1") score++;
+
+feedback.innerHTML =
+"<div class='reviewBox'>" +
+"<p><strong>Score: " + score + "/4</strong></p>" +
+"<p><strong>Q1:</strong> Correct answer: The population increased dramatically in Year 4.</p>" +
+"<p><strong>Q2:</strong> Correct answer: Mild winters allow more grasshoppers to survive.</p>" +
+"<p><strong>Q3:</strong> Correct answer: Prairie grass populations decrease due to consumption.</p>" +
+"<p><strong>Q4:</strong> Correct answer: It may experience short-term instability.</p>" +
+"</div>";
+}
+</script>
+
+</body>
+</html>
